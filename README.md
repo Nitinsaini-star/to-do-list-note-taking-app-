@@ -116,32 +116,32 @@ The backend will be available at `http://localhost:5000`
    - Backend: `http://localhost:5000`
    - MongoDB: `localhost:27017`
 
-## Production Deployment
+## Quick Deploy to Vercel 🚀
 
-### Vercel (Recommended)
+### One-Click Deployment
 
-1. Install Vercel CLI:
+1. **Deploy Backend:**
    ```bash
-   npm i -g vercel
+   npm run deploy:backend
    ```
 
-2. Deploy:
+2. **Deploy Frontend:**
    ```bash
-   vercel --prod
+   npm run deploy:frontend
    ```
 
-3. Set environment variables in Vercel dashboard:
-   - `MONGODB_URI`: Your MongoDB connection string
-   - `JWT_SECRET`: Your JWT secret key
+### Detailed Deployment Guide
 
-### Other Platforms
+📖 **Check out [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment instructions**
 
-The application can be deployed to any platform that supports Node.js and React:
+### Required Environment Variables
 
-- **Netlify**: Frontend deployment with serverless functions
-- **Heroku**: Full-stack deployment
-- **AWS**: Using ECS or Elastic Beanstalk
-- **DigitalOcean**: Using App Platform
+**Backend:**
+- `MONGODB_URI`: MongoDB Atlas connection string
+- `JWT_SECRET`: Secure random string for JWT tokens
+
+**Frontend:**
+- `REACT_APP_API_URL`: Your deployed backend URL
 
 ## API Endpoints
 
